@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #efeae3;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#loader{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 99;
+  color: white;
+  display: flex;align-items: center;
+ gap: 1vw;
+  justify-content: center;
+}
+#loader h3{
+  font-size: 2vw;
+}
+#main {
+  width: 100%;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #efeae3;
+  position: relative;
+}
+#nav {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  padding: 0px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav img {
+  height: 65px;
+}
+#nav .btn {
+  display: flex;
+  gap: 10px;
+}
+#nav button {
+  font-size: 15px;
+  padding: 11.25px 22px;
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid rgba(149, 141, 141, 0.542);
+}
+#nav button:hover{
+  background-color: black;
+  color: white;
+  transition: all ease 0.1s;
+  
+}
+
+#page1 h1 {
+  font-size: 160px;
+  position: absolute;
+  line-height: 0.8;
+  text-align: end;
+  text-transform: uppercase;
+  font-weight: 700;
+  top: 38%;
+  left: 56%;
+  z-index: 1;
+}
+#page1 h2 {
+  font-size: 26px;
+  position: absolute;
+  line-height: 1;
+  font-weight: 700;
+  top: 78%;
+  left: 2%;
+  color: black;
+}
+
+#page1 .circle {
+  width: 70vw;
+  border-radius: 50%;
+  filter: blur(30px);
+  height: 40vw;
+  z-index: 89;
+  position: absolute;
+  right: -23%;
+  top: 90%;
+  bottom: 0;
+  background: linear-gradient(rgb(255, 115, 0), orangered, red);
+  animation-name: anime;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+#page2 {
+  width: 100%;
+  height: 120vh;
+  background-color: #efeae3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#page2 hr {
+  margin-top: 30px;
+  width: 97%;
+}
+.clip {
+  margin-top: 70px;
+  border-radius: 30px;
+  width: 95%;
+  height: 100%;
+  overflow: hidden;
+}
+.clip video {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: relative;
+  object-fit: cover;
+}
+#page3 {
+  width: 100%;
+  height: 100vh;
+  background-color: #efeae3;
+  position: relative;
+}
+
+#fixed-card {
+  width: 330px;
+  height: 420px;
+  position: fixed;
+  left: 50%;
+  top: 14%;
+  border-radius: 20px;
+  z-index: 999;
+  background-size: cover;
+  background-position: center;
+}
+
+.elem {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 650;
+  padding: 0px 30px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #ff9831;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  transition: all ease 0.2s;
+}
+h1 {
+  z-index: 99;
+}
+.elem:hover .overlay {
+  top: 0;
+}
+#page4 {
+  width: 100%;
+  height: 105vh;
+  position: relative;
+}
+
+#page4 .circle {
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(30px);
+  height: 30vw;
+  position: absolute;
+  margin-left: 20%;
+  top: 25%;
+  background: linear-gradient(rgb(255, 123, 0), orangered, red);
+  animation-name: anime;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes anime {
+  from {
+    transform: translate(5%, -10%) skewX(0) skewX(0deg);
+  }
+  to {
+    transform: translate(-5%, 10%) skewX(0deg) skewY(-10deg);
+  }
+}
+#page4 .boxs {
+  width: 100%;
+  height: 80%;
+  margin-top: 26%;
+  display: flex;
+}
+#page4 .box1 {
+  width: 65%;
+  height: 100%;
+  z-index: 99;
+  padding: 50px 90px;
+}
+#page4 .box1 h1 {
+  font-family: hedvig letters sans;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+#page4 .box2 {
+  width: 35%;
+  padding: 30px 50px;
+  height: 100%;
+}
+#page4 .box2 .im {
+  width: 23vw;
+  height: 15vw;
+  border-radius: 10px;
+  margin-top: 35%;
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+#page4 .box2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#page4 .fea {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 80px;
+}
+#page4 .dot {
+  width: 8px;
+  height: 8px;
+  background-color: orangered;
+  border-radius: 50%;
+}
+#page4 h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#page5 {
+  width: 100%;
+  height: 150vh;
+  margin-top: 16%;
+  padding: 30px 42px;
+}
+
+#page5 button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.262);
+  background-color: transparent;
+}
+
+#page5 .img-text {
+  width: 100%;
+  height: 86%;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+}
+#page5 .tex {
+  width: 45%;
+  height: 100%;
+  color: white;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+#page5 .line {
+  width: 196px;
+  height: 3px;
+  background-color: rgb(80, 74, 69);
+  position: absolute;
+  rotate: 90deg;
+  margin-left: 30px;
+  margin-bottom: 260px;
+  border-radius: 20px;
+}
+#page5 .textbox {
+  width: 300px;
+  height: 200px;
+  margin-top: 40px;
+  margin-left: 25%;
+}
+#page5 .cl {
+  width: 68px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: rgb(254, 51, 10);
+}
+#page5 .tex h1 {
+  font-size: 68px;
+  margin-top: -18px;
+  margin-left: 25%;
+  color: rgb(80, 74, 69);
+}
+#page5 p {
+  color: rgb(198, 197, 195);
+}
+#page5 .img {
+  width: 55%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#page6 {
+  width: 100%;
+  height: 95vh;
+}
+#page6 .text-dot {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  gap: 8px;
+  margin-top: 5%;
+}
+#page6 .dots {
+  width: 1vh;
+  height: 1vh;
+  background-color: orangered;
+  border-radius: 50%;
+}
+#page6 h4 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#page6 #elems-text {
+  margin-top: 100px;
+  width: 100%;
+  height: 37%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#page6 .elm {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  /* background: red; */
+  border-left: 1px solid black;
+  padding: 1px 20px;
+}
+#page6 .elm img {
+  height: 60px;
+  margin-right: 90px;
+  margin-bottom: 30px;
+}
+
+#page7 {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+#page7 .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 90px;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  height: 160px;
+}
+#page7 .hover-text h4 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-family: Hedvig Letters Sans;
+  font-weight: 600;
+}
+#page7 .email {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#page7 .email input {
+  background-color: transparent;
+  border: none;
+  padding: 12px 0px;
+  font-size: 15px;
+}
+#page7 .email h5 {
+  font-size: 17px;
+  font-weight: 500;
+}
+#page7 .lin {
+  width: 80%;
+  height: 1px;
+  background-color: #ffffff48;
+  margin-top: -29px;
+}
+#page7 .branding {
+  width: 95%;
+  height: 50%;
+  position: absolute;
+
+  bottom: 10%;
+  border-bottom: 1px solid white;
+}
+#page7 img {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  z-index: 10;
+}
+
+#page7 #links {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  margin-top: 44%;
+  font-size: 18px;
+}
+#page7 #links h5 {
+  font-weight: 500;
+}
+#page7 #links #il {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+#page7 .circle {
+  width: 100vw;
+  filter: blur(30px);
+  height: 50vw;
+  position: absolute;
+  right: 0%;
+  top: -35%;
+  bottom: 0;
+  background: linear-gradient(rgb(255, 115, 0), orangered, red);
+  animation-name: anim;
+  rotate: 19deg;
+  animation-duration: 2s;
+  top: -45%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes anim {
+  from {
+    transform: translate(0%, 0%) skewX(0) skewX(0deg);
+  }
+  to {
+    transform: translate(0%, 0%) skewX(0deg) skewY(-8deg);
+  }
+}
+/* .scroll-text {
+display: flex;
+gap: 20px;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.scroll-text::-webkit-scrollbar{
+  display: none;
+}
+.scroll-text h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 20px;
+  animation-name: anime;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes anime {
+  from{
+    transform: translateX(0%);
+  }  
+  to{
+    transform: translateX(calc(-100% - 24px));
+  }
+} */
